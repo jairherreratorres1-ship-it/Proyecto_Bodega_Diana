@@ -1,0 +1,17 @@
+{
+    "inventario":[
+        {
+            "id": 1,
+            "producto": "Arroz",
+            "stock": 50,
+            "precio":1.5
+        },
+        {
+            "id": 2,
+            "producto": "Frijoles",
+            "stock": 30,
+            "precio":2.0
+        }
+
+    ]
+}
