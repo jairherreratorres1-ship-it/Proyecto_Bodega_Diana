@@ -1,0 +1,13 @@
+RUTA_JSON = "data/inventario.json"
+RUTA_EXCEL_REPORTE = "data/Reporte.xlsx"
+
+MONEDA = "S/."
+IGV = 0.18
+
+LINEA_SEPARADORA = "=" * 45
+
+BANNER_BIENVENIDA = f"""
+{LINEA_SEPARADORA}
+    SISTEMA DE GESTIÓN: BODEGA DIANA
+{LINEA_SEPARADORA}
+"""
