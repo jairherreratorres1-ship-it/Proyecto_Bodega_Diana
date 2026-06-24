@@ -1,16 +1,10 @@
 {
-    "inventario":[
+    "inventario": [
         {
             "id": 1,
-            "nombre": "Arroz",
-            "cantidad": 100,
-            "precio": 1.5
-        },
-        {
-            "id": 2,
-            "nombre": "Frijoles",
-            "cantidad": 50,
-            "precio": 2.0
+            "producto": "Arroz",
+            "stock": 10,
+            "precio": 3.2
         }
     ]
 }
