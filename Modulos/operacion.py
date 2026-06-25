@@ -120,3 +120,18 @@ def actualizar_producto(datos):
             return
     else:
         print("Producto no encontrado.")
+        
+def mostrar_inventario(datos):
+    
+    print(LINEA_SEPARADORA)
+    if not datos["inventario"]:
+        print("El inventario está vacío.")
+        print(LINEA_SEPARADORA)
+        return False
+        
+    print("               INVENTARIO ACTUAL")
+    print(LINEA_SEPARADORA)
+    for p in datos["inventario"]:
+        print(f"ID: {p['id']} | Producto: {p['producto']} | Stock: {p['stock']} | Precio: S/.{p['precio']:.2f}")
+    print(LINEA_SEPARADORA)
+    return True

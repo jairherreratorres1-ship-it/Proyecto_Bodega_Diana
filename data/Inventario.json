@@ -3,8 +3,54 @@
         {
             "id": 1,
             "producto": "Arroz",
-            "stock": 10,
+            "stock": 30,
             "precio": 3.2
+        },
+        {
+            "id": 2,
+            "producto": "LECHE",
+            "stock": 80,
+            "precio": 5.2
+        },
+        {
+            "id": 3,
+            "producto": "ATUN",
+            "stock": 50,
+            "precio": 6.8
+        }
+    ],
+    "ventas": [
+        {
+            "id": 1,
+            "id_producto": 1,
+            "producto": "Arroz",
+            "cantidad": 20,
+            "precio_unitario": 3.2,
+            "total": 64.0,
+            "metodo_pago": "Efectivo",
+            "vendedor": "JAIR",
+            "fecha_venta": "2026-06-25"
+        },
+        {
+            "id": 2,
+            "id_producto": 2,
+            "producto": "LECHE",
+            "cantidad": 20,
+            "precio_unitario": 5.2,
+            "total": 104.0,
+            "metodo_pago": "Tarjeta",
+            "vendedor": "JAIR",
+            "fecha_venta": "2026-06-25"
+        }
+    ],
+    "reporte": [
+        {
+            "id": 1,
+            "fecha": "2026-06-25",
+            "total_ventas": 2,
+            "producto_mas_vendido": "Arroz",
+            "ingresos_totales": 168.0,
+            "ganancia_total": 16.8
         }
     ]
 }

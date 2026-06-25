@@ -7,7 +7,7 @@ def leer_datos():
         with open (RUTA_JSON,"r", encoding="utf-8") as l:
             return json.load(l)
     except (FileNotFoundError,json.JSONDecodeError):
-        return {"inventario":[]}
+        return {"inventario":[],"ventas":[],"reporte":[]}
     
 def guardar_datos(datos):
     with open(RUTA_JSON, 'w', encoding ='utf-8') as g:
