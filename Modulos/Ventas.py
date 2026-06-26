@@ -46,7 +46,7 @@ class Venta:
             "id_producto": self.id_producto,
             "producto": self.producto,
             "cantidad": self.cantidad,
-            "precio_unitario": self.precio_unitario,
+            "precio_unitario": round(self.precio_unitario,2),
             "total": self.calcular_total(),
             "metodo_pago": self.seleccionar_metodo_pago(),
             "vendedor": self.ingresar_vendedor(),
@@ -62,7 +62,15 @@ def registrar_venta(datos, producto_encontrado=None):
     if producto_encontrado is None:
         return
     
-    cantidad = int(input("Ingresa la cantidad a vender: "))
+    while True:
+        try:
+            cantidad = int(input("Ingresa la cantidad a vender: "))
+            if cantidad <= 0:
+                print("El numero ingresado debe ser mayor a 0")
+            else:
+                break
+        except ValueError:
+            print("Error, debe ingresar un número")
     
     if cantidad > producto_encontrado["stock"]:
         print(f'Stock insuficiente. Stock disponible: {producto_encontrado["stock"]}')

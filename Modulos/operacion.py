@@ -103,7 +103,7 @@ def actualizar_producto(datos):
                 print("Operación Cancelada.")
                 return
             
-            check = input("Deseas actualizar? Si/No").strip().upper()
+            check = input("Deseas actualizar? Si/No: ").strip().upper()
             
             if check == "SI":
                 if opcion == "1":

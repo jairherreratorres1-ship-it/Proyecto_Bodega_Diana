@@ -3,13 +3,13 @@
         {
             "id": 1,
             "producto": "Arroz",
-            "stock": 30,
+            "stock": 0,
             "precio": 3.2
         },
         {
             "id": 2,
             "producto": "LECHE",
-            "stock": 80,
+            "stock": 20,
             "precio": 5.2
         },
         {
@@ -17,6 +17,12 @@
             "producto": "ATUN",
             "stock": 50,
             "precio": 6.8
+        },
+        {
+            "id": 4,
+            "producto": "AZUCAR",
+            "stock": 20,
+            "precio": 2.5
         }
     ],
     "ventas": [
@@ -41,16 +47,105 @@
             "metodo_pago": "Tarjeta",
             "vendedor": "JAIR",
             "fecha_venta": "2026-06-25"
+        },
+        {
+            "id": 3,
+            "id_producto": 2,
+            "producto": "LECHE",
+            "cantidad": 20,
+            "precio_unitario": 5.2,
+            "total": 104.0,
+            "metodo_pago": "Efectivo",
+            "vendedor": "JAIR",
+            "fecha_venta": "2026-06-25"
+        },
+        {
+            "id": 4,
+            "id_producto": 4,
+            "producto": "AZUCAR",
+            "cantidad": 10,
+            "precio_unitario": 2.5,
+            "total": 25.0,
+            "metodo_pago": "Yape / Plin",
+            "vendedor": "JAIR",
+            "fecha_venta": "2026-06-25"
+        },
+        {
+            "id": 5,
+            "id_producto": 1,
+            "producto": "Arroz",
+            "cantidad": 0,
+            "precio_unitario": 3.2,
+            "total": 0.0,
+            "metodo_pago": "Efectivo",
+            "vendedor": "JAIR",
+            "fecha_venta": "2026-06-25"
+        },
+        {
+            "id": 6,
+            "id_producto": 1,
+            "producto": "Arroz",
+            "cantidad": 1,
+            "precio_unitario": 3.2,
+            "total": 3.2,
+            "metodo_pago": "Efectivo",
+            "vendedor": "JAIR",
+            "fecha_venta": "2026-06-25"
+        },
+        {
+            "id": 7,
+            "id_producto": 1,
+            "producto": "Arroz",
+            "cantidad": 29,
+            "precio_unitario": 3.2,
+            "total": 92.80000000000001,
+            "metodo_pago": "Yape / Plin",
+            "vendedor": "JAIR",
+            "fecha_venta": "2026-06-25"
+        },
+        {
+            "id": 8,
+            "id_producto": 1,
+            "producto": "Arroz",
+            "cantidad": 20,
+            "precio_unitario": 3.2,
+            "total": 64.0,
+            "metodo_pago": "Efectivo",
+            "vendedor": "JAIR",
+            "fecha_venta": "2026-06-25"
+        },
+        {
+            "id": 9,
+            "id_producto": 1,
+            "producto": "Arroz",
+            "cantidad": 30,
+            "precio_unitario": 3.2,
+            "total": 96.0,
+            "metodo_pago": "Efectivo",
+            "vendedor": "JAIR",
+            "fecha_venta": "2026-06-25"
         }
     ],
-    "reporte": [
+    "ventas_totales": [
         {
             "id": 1,
             "fecha": "2026-06-25",
-            "total_ventas": 2,
-            "producto_mas_vendido": "Arroz",
-            "ingresos_totales": 168.0,
-            "ganancia_total": 16.8
+            "total_ventas": 4
+        }
+    ],
+    "producto_mas_vendido": [],
+    "ganancia": [
+        {
+            "id": 1,
+            "fecha": "2026-06-25",
+            "ingresos_totales": 272.0,
+            "ganancia_total": 27.2
+        },
+        {
+            "id": 2,
+            "fecha": "2026-06-25",
+            "ingresos_totales": 297.0,
+            "ganancia_total": 29.7
         }
     ]
 }

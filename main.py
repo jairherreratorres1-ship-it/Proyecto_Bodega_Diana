@@ -2,7 +2,7 @@ from Modulos.config import BANNER_BIENVENIDA, LINEA_SEPARADORA
 from Modulos.archivo import leer_datos
 from Modulos.operacion import agregar_producto, buscar_producto, eliminar_producto, actualizar_producto, mostrar_inventario
 from Modulos.Ventas import registrar_venta
-from Modulos.reportes import generar_reporte
+from Modulos.reportes import menu_reportes
 
 def mostrar_menu():
     print(BANNER_BIENVENIDA)
@@ -16,7 +16,7 @@ def mostrar_menu():
 
 def menu_mercaderia(datos):
     while True:
-        print("\n--- GESTIÓN DE MERCADERÍA ---")
+        print("\nGESTIÓN DE MERCADERÍA")
         print("1. Agregar Nuevo Producto")
         print("2. Actualizar Stock / Precio de un Producto")
         print("3. Eliminar Producto")
@@ -53,7 +53,7 @@ def flujo_ver_inventario(datos):
 def main():
     datos = leer_datos()
     
-    inicio = input("¿Desea mostrar el menú de opciones? SI/NO: ").strip().upper()
+    inicio = input("¿Mostrar Menu Principal? SI/NO: ").strip().upper()
     if inicio != "SI":
         print("Operación cancelada. Cerrando el sistema.")
         return
@@ -71,7 +71,7 @@ def main():
         elif opcion == "4":
             menu_mercaderia(datos)
         elif opcion == "5":
-            generar_reporte(datos)
+            menu_reportes(datos)
         elif opcion == "6":
             print("Saliendo del sistema... ¡Gracias por usar Bodega Diana!")
             break
