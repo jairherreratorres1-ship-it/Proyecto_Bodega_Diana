@@ -4,6 +4,7 @@ from Modulos.operacion import agregar_producto, buscar_producto, eliminar_produc
 from Modulos.Ventas import registrar_venta
 from Modulos.reportes import menu_reportes
 
+# Mostramos el banner de bienvenida y las opciones del menú principal
 def mostrar_menu():
     print(BANNER_BIENVENIDA)
     print("1. Buscar Producto")
@@ -14,6 +15,7 @@ def mostrar_menu():
     print("6. Salir")
     print(LINEA_SEPARADORA)
 
+#Definimos nuestro menu de mercadería con las opciones agregar,actualizar y eliminar en nuestra colección de inventario
 def menu_mercaderia(datos):
     while True:
         print("\nGESTIÓN DE MERCADERÍA")
@@ -34,6 +36,7 @@ def menu_mercaderia(datos):
         else:
             print("Opción inválida.")
 
+# Definimos el flujo de búsqueda de producto con opción de registrar venta si se encuentra
 def flujo_buscar_y_vender(datos):
     producto_encontrado = buscar_producto(datos)
     
@@ -42,6 +45,7 @@ def flujo_buscar_y_vender(datos):
         if check_venta == "SI":
             registrar_venta(datos, producto_encontrado)
 
+# Mostramos el inventario completo con opción de actualizar un producto directamente
 def flujo_ver_inventario(datos):
     inventario_tiene_productos = mostrar_inventario(datos)
     
@@ -50,6 +54,7 @@ def flujo_ver_inventario(datos):
         if check_actualizar == "SI":
             actualizar_producto(datos)
 
+# Punto de entrada del sistema, cargamos los datos y controlamos el flujo principal con el menú
 def main():
     datos = leer_datos()
     

@@ -1,8 +1,7 @@
-import json
 from Modulos.archivo import guardar_datos
 from Modulos.config import LINEA_SEPARADORA
 
-
+# Buscamos un producto en el inventario por nombre y retornamos el diccionario encontrado o None
 def buscar_producto(datos):
     nProducto = input("Ingresa el nombre del producto: ").strip().upper()
     
@@ -16,7 +15,7 @@ def buscar_producto(datos):
         print("Producto no encontrado.")
         return None
 
-
+# Agregamos un nuevo producto al inventario con ID autoincremental, nombre, stock y precio
 def agregar_producto(datos):
     nuevo_id = len(datos["inventario"])+1
     nuevo_producto = input("Ingresa el nombre del producto: ").strip().upper()
@@ -42,7 +41,7 @@ def agregar_producto(datos):
     else:
         print("Operación Cancelada.")
         
-        
+# Eliminamos un producto del inventario buscándolo por nombre con confirmación previa        
 def eliminar_producto(datos):
     nombre_producto = input("Ingrese el nombre del producto a eliminar: ").strip().upper()
     
@@ -66,7 +65,7 @@ def eliminar_producto(datos):
         
             
         
-
+# Actualizamos el stock, precio o ambos de un producto existente en el inventario
 def actualizar_producto(datos):
     nombre_producto = input("Ingrese el nombre del producto a actualizar: ").strip().upper()
     for producto in datos["inventario"]:
@@ -120,7 +119,8 @@ def actualizar_producto(datos):
             return
     else:
         print("Producto no encontrado.")
-        
+
+# Mostramos todos los productos del inventario en formato tabla y retornamos True si hay productos        
 def mostrar_inventario(datos):
     
     print(LINEA_SEPARADORA)

@@ -3,13 +3,16 @@ from Modulos.config import LINEA_SEPARADORA
 from Modulos.operacion import buscar_producto
 from Modulos.archivo import guardar_datos
 
+# Clase que representa una venta, encapsula la lógica de negocio para registrar transacciones
 class Venta:
+    # Inicializamos los atributos del objeto con los datos del producto encontrado y la cantidad
     def __init__(self, producto, cantidad):
         self.id_producto = producto["id"]
         self.producto = producto["producto"]
         self.precio_unitario = producto["precio"]
         self.cantidad = cantidad
     
+    # Mostramos el menú de métodos de pago y retornamos la opción seleccionada
     def seleccionar_metodo_pago(self):
         
         metodos = {
@@ -34,12 +37,15 @@ class Venta:
             return None
         return metodos[opcion]
     
+    # Solicitamos el nombre del vendedor y lo retornamos en mayúsculas
     def ingresar_vendedor(self):
         return input("Ingresa el nombre del vendedor: ").strip().upper()
-            
+    
+    # Calculamos el total de la venta multiplicando precio unitario por cantidad        
     def calcular_total(self):
         return self.precio_unitario * self.cantidad
     
+    # Construimos el diccionario con todos los datos de la venta listo para guardar en el JSON
     def diccionario(self, id_venta):
         return {
             "id": id_venta,
@@ -52,9 +58,12 @@ class Venta:
             "vendedor": self.ingresar_vendedor(),
             "fecha_venta": str(date.today())
         }
+    
+    # Retornamos la representación en texto del objeto para mostrar el resumen antes de confirmar    
     def __str__(self):
         return f'Producto: {self.producto}\nCantidad: {self.cantidad}\nPrecio unitario: {self.precio_unitario}\nTotal: {self.calcular_total()}'
-        
+
+ # Registramos una venta buscando el producto, validando stock y guardando en la colección de ventas       
 def registrar_venta(datos, producto_encontrado=None):
     if producto_encontrado is None:
         producto_encontrado = buscar_producto(datos)
